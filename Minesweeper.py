@@ -70,8 +70,6 @@ class MinesweeperTile(Button):
         reveals what is in Tile'''
         # make sure Tile has not been clicked, flagged, frozen
         if not self.clicked and not self.flagged and not self.frozen:
-            #self.focus_set()
-            
             # check if the inside is a mine
             if self.inside == '*':
                 self['text'] = self.inside
@@ -104,8 +102,6 @@ class MinesweeperTile(Button):
         inserts or removes flag from Tile'''
         # make sure Tile has not been clicked or frozen
         if not self.clicked and not self.frozen:
-            #self.focus_set()
-            
             # unflag Tile
             if self.flagged:
                 self['text'] = ''
